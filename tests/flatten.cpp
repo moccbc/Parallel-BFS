@@ -6,10 +6,10 @@
 #include <algorithm>
 #include <cilk/cilk.h>
 #include <cilk/cilk_api.h>
-#include "../get_time.h"
-#include "../scan.h"
-#include "../flatten.h"
-#include "../filter.h"
+#include "../utils/get_time.h"
+#include "../utils/scan.h"
+#include "../utils/flatten.h"
+#include "../utils/filter.h"
 using namespace std;
 
 // Assumes that the frontier passed in and the new frontier

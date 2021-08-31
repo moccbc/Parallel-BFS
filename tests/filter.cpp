@@ -6,9 +6,9 @@
 #include <algorithm>
 #include <cilk/cilk.h>
 #include <cilk/cilk_api.h>
-#include "../get_time.h"
-#include "../scan.h"
-#include "../filter.h"
+#include "../utils/get_time.h"
+#include "../utils/scan.h"
+#include "../utils/filter.h"
 using namespace std;
 
 int main(int argc, char** argv) {
