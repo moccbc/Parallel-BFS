@@ -48,12 +48,10 @@ int main(int argc, char** argv) {
 	ios_base::sync_with_stdio(false);
 	cin.tie(0);
 	commandLine P(argc, argv, "[-g size_set_1] [-s source]");
-	string graphname = P.getOptionValue("-g", "soc-LiveJournal_sym.adj");
-	int s = P.getOptionIntValue("-s", 214);
+	string graphname = P.getOptionValue("-g", "tests/test1_sample.txt");
+	int s = P.getOptionIntValue("-s", 0);
 	
-	string dir = "/usr/local/cs214/";
-	string filename = dir+graphname;
-	//string filename = graphname;
+	string filename = graphname;
 	freopen(filename.c_str(), "r", stdin);
 	
 	int n, m;
