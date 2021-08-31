@@ -13,6 +13,7 @@ using namespace std;
 
 #define NUM_ROUNDS 5
 
+// Sequential BFS for running against the parallel one
 void seq_BFS(int n, int m, int* offset, int* E, int s, int* dist) {
 	for (int i = 0; i < n; i++) dist[i] = -1;
 	
@@ -46,8 +47,7 @@ void printArr(int* arr, int n) {
 int main(int argc, char** argv) {
 	ios_base::sync_with_stdio(false);
 	cin.tie(0);
-	commandLine P(argc, argv,
-		"[-g size_set_1] [-s source]");
+	commandLine P(argc, argv, "[-g size_set_1] [-s source]");
 	string graphname = P.getOptionValue("-g", "soc-LiveJournal_sym.adj");
 	int s = P.getOptionIntValue("-s", 214);
 	
@@ -103,12 +103,14 @@ int main(int argc, char** argv) {
 	delete[] dist_check;
 	}
 	
+	// Warmup round for the parallel bfs
 	{
 	int* dist = new int[n];
 	BFS(n, m, offset, E, s, dist);
 	delete[] dist;
 	}
 	
+	// Testing performance
 	double tot_time = 0.0;
 	for (int round = 0; round < NUM_ROUNDS; round++) {
 		int* dist = new int[n];
