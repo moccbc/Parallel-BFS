@@ -6,8 +6,8 @@
 #include <algorithm>
 #include <cilk/cilk.h>
 #include <cilk/cilk_api.h>
-#include "get_time.h"
-#include "parse_command_line.h"
+#include "utils/get_time.h"
+#include "utils/parse_command_line.h"
 #include "bfs.h"
 using namespace std;
 

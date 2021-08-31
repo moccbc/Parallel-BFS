@@ -1,4 +1,4 @@
-#include "edgemap.h"
+#include "utils/edgemap.h"
 #define FRONTIER_TH 100000
 
 // Main driver function for parallel bfs
