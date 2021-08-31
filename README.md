@@ -2,11 +2,18 @@
 
 This is an implementation of parallel breadth first search for an unweighted undirected graph in a shared memeory setting using the ideas from the paper "Ligra: A Lightweight Graph Processing Framework for Shared Memory". In particular, it implements the edgeMap, edgeMapDense, and edgeMapSparse algorithms to acheive upwards of X10 speedup from a sequential version of bfs.
 
-# Running the code
+## Installation
+
+You can simply clone the module, then change the directories into it.
+
+```bash
+git clone https://github.com/moccbc/Parallel-BFS.git
+cd Parallel-BFS
+```
 
 ## Dependencies
 
-You must have the following libraries installed on your system:
+You must have the following libraries installed on your system to build and run the project:
 
 - g++ >= 5.3.0
 - Cilk Plus
@@ -19,7 +26,7 @@ There is a make file provided in the repository. To build the code just type in
 make
 ```
 
-in your terminal.
+into your terminal.
 
 ## Running the Project
 
@@ -35,6 +42,8 @@ For example, if you want to run the bfs code on the second test graph, you would
 ```
 
 ## Graph Representation
+
+If you want to test out the code on your own graphs, it is important to know how the graph is represented internally.
 
 The input graphs that the code takes in are represented in the Compressed Sparse Row (CSR) format. With the CSR format, the graphs are represented similar to an adjacency list. The first entry will be the graph type. This is not important for this project. Then the number of nodes, n, and the number of edges, m, will follow. The next n numbers represent the 0-based indexes for where the neighborhood set of the i-th vertex ends. Then m numbers will follow, with the o_(i-1) to o_i indexs being the labels of the neighbors of the i-th vertex. Below is a diagram of the CSR representation with its corresponding graph representation.
 
