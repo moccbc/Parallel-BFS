@@ -69,5 +69,5 @@ GraphType
 
 # References
 
-Y. Shun, G. Blelloch. [Ligra: A Lightweight Graph Processing Framework for Shared Memory](https://www.cs.cmu.edu/~jshun/ligra.pdf)
+J. Shun, G. Blelloch. [Ligra: A Lightweight Graph Processing Framework for Shared Memory](https://www.cs.cmu.edu/~jshun/ligra.pdf)
 
